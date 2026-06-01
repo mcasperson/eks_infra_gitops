@@ -19,6 +19,7 @@ spec:
   # Disable autosync, as Argo CD instances will manually sync after testing
   syncPolicy:
     automated:
-      enabled: false
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
