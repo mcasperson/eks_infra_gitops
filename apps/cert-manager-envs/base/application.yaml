@@ -16,7 +16,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager-envs
-  # Disable autosync, as Argo CD instances will manually sync after testing
   syncPolicy:
     automated:
       prune: true
