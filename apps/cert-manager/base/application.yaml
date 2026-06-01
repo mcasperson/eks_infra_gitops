@@ -3,9 +3,6 @@ kind: Application
 metadata:
   name: cert-manager
   namespace: argocd
-  annotations:
-    argo.octopus.com/project: "cert-manager"
-    argo.octopus.com/environment: "test"
 spec:
   project: default
   source:
