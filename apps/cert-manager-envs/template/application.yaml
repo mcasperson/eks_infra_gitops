@@ -1,24 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cert-manager
-  namespace: argocd
+  name: cert-manager-envs
 spec:
   project: default
   source:
-    repoURL: https://charts.jetstack.io
-    chart: cert-manager
     targetRevision: "#{Octopus.Action[Run a Script].Package[cert-manager].PackageVersion}"
-    helm:
-      values: |
-        crds:
-          enabled: true
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: cert-manager
-  # Disable autosync, as Argo CD instances will manually sync after testing
-  syncPolicy:
-    automated:
-      enabled: false
-    syncOptions:
-      - CreateNamespace=true
