@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/mcasperson/eks_infra_gitops.git
     targetRevision: HEAD
-    path: apps/cert-manager
+    path: apps/cert-manager/base
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
