@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager-envs-production-root
+  namespace: argocd
+  annotations:
+    argo.octopus.com/project: "cert-manager-envs"
+    argo.octopus.com/environment: "production"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mcasperson/eks_infra_gitops.git
+    targetRevision: HEAD
+    path: apps/cert-manager-envs/envs/production
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
