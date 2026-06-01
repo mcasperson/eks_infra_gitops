@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cert-manager-source
+  name: cert-manager-root
   namespace: argocd
   annotations:
     argo.octopus.com/project: "cert-manager"
