@@ -3,7 +3,7 @@ kind: Kustomization
 
 # Include the environment agnostic K8s resources
 resources:
-  - ../../base/application.yaml
+  - ../../base
 
 patches:
   - path: application.yaml
