@@ -1,3 +1,4 @@
+# This config map gives the "octopus" user the permissions required by the Argo CD Instance
 apiVersion: v1
 kind: ConfigMap
 metadata:
