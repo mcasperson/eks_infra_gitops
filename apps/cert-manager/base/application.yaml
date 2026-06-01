@@ -17,6 +17,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: cert-manager
   # Disable autosync, as Argo CD instances will manually sync after testing
+  # To create the resources, run "argocd app sync cert-manager"
   syncPolicy:
     automated:
       enabled: false
