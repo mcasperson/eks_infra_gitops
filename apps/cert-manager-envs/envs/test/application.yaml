@@ -5,4 +5,4 @@ metadata:
 spec:
   project: default
   source:
-    targetRevision: "v1.19.4"
+    targetRevision: "v1.19.5"
